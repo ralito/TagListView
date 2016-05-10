@@ -11,6 +11,7 @@ import UIKit
 @objc public protocol TagListViewDelegate {
     optional func tagPressed(title: String, tagView: TagView, sender: TagListView) -> Void
     optional func tagRemoveButtonPressed(title: String, tagView: TagView, sender: TagListView) -> Void
+    optional func tagAddButtonPressed(title: String, tagView: TagView, sender: TagListView) -> Void
 }
 
 @IBDesignable
@@ -338,7 +339,12 @@ public class TagListView: UIView {
     
     func removeButtonPressed(closeButton: CloseButton!) {
         if let tagView = closeButton.tagView {
-            delegate?.tagRemoveButtonPressed?(tagView.currentTitle ?? "", tagView: tagView, sender: self)
+            switch tagView.removeButtonType {
+            case .Add:
+                delegate?.tagAddButtonPressed?(tagView.currentTitle ?? "", tagView: tagView, sender: self)
+            case .Remove:
+                delegate?.tagRemoveButtonPressed?(tagView.currentTitle ?? "", tagView: tagView, sender: self)
+            }
         }
     }
 }

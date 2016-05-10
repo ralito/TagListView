@@ -46,7 +46,12 @@ class ViewController: UIViewController, TagListViewDelegate {
     }
     
     func tagRemoveButtonPressed(title: String, tagView: TagView, sender: TagListView) {
-        print("Tag Remove pressed: \(title), \(sender)")
+        
+        sender.removeTagView(tagView)
+    }
+    
+    func tagAddButtonPressed(title: String, tagView: TagView, sender: TagListView) {
+        
         sender.removeTagView(tagView)
     }
 }

@@ -8,6 +8,11 @@
 
 import UIKit
 
+public enum TagButtonType {
+    case Add
+    case Remove
+}
+
 @IBDesignable
 public class TagView: UIButton {
 
@@ -134,6 +139,8 @@ public class TagView: UIButton {
             updateRightInsets()
         }
     }
+    
+    public var removeButtonType: TagButtonType = .Add
     
     /// Handles Tap (TouchUpInside)
     public var onTap: ((TagView) -> Void)?
