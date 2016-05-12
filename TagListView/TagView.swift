@@ -44,13 +44,13 @@ public class TagView: UIButton {
             reloadStyles()
         }
     }
-    @IBInspectable public var paddingY: CGFloat = 2 {
+    @IBInspectable public var paddingY: CGFloat = 14 {
         didSet {
             titleEdgeInsets.top = paddingY
             titleEdgeInsets.bottom = paddingY
         }
     }
-    @IBInspectable public var paddingX: CGFloat = 5 {
+    @IBInspectable public var paddingX: CGFloat = 20 {
         didSet {
             titleEdgeInsets.left = paddingX
             updateRightInsets()

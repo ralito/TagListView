@@ -88,7 +88,7 @@ public class TagListView: UIView {
         }
     }
     
-    @IBInspectable public var paddingY: CGFloat = 2 {
+    @IBInspectable public var paddingY: CGFloat = 14 {
         didSet {
             for tagView in tagViews {
                 tagView.paddingY = paddingY
@@ -96,7 +96,7 @@ public class TagListView: UIView {
             rearrangeViews()
         }
     }
-    @IBInspectable public var paddingX: CGFloat = 5 {
+    @IBInspectable public var paddingX: CGFloat = 20 {
         didSet {
             for tagView in tagViews {
                 tagView.paddingX = paddingX
