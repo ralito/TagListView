@@ -140,7 +140,7 @@ public class TagView: UIButton {
         }
     }
     
-    public var removeButtonType: TagButtonType = .Add
+    public var removeButtonType: TagButtonType = .Remove
     
     /// Handles Tap (TouchUpInside)
     public var onTap: ((TagView) -> Void)?
