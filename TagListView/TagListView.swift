@@ -104,12 +104,12 @@ public class TagListView: UIView {
             rearrangeViews()
         }
     }
-    @IBInspectable public var marginY: CGFloat = 2 {
+    @IBInspectable public var marginY: CGFloat = 10 {
         didSet {
             rearrangeViews()
         }
     }
-    @IBInspectable public var marginX: CGFloat = 5 {
+    @IBInspectable public var marginX: CGFloat = 10 {
         didSet {
             rearrangeViews()
         }
